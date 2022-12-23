@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block contenido %}
+    <div class="display-2 text-center">Lista Equipos</div>
+    <br>  
+    <table class="table table-dark table-sm">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Año creacion</th>
+                <th>Fue campeon</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for Equipo in equipo %}
+            <tr>
+                <td>{{ Equipo.nombre}}</td>
+                <td>{{ Equipo.anio_creacion}}</td>
+                {% if Equipo.campeon %}
+                <td>Si</td>
+                {% else %}
+                <td>No</td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>    
+{% endblock %}

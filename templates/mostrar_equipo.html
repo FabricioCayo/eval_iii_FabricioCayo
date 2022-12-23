@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block contenido %}
+    <div class="display-1 text-center">
+       
+        
+    </div>
+    <div class="card text-center" style="width: 18rem;">
+        {% if equipo.campeon == 1 %}      
+                <img src="{% static 'img/copa.jpg' %}" class="card-img-top" alt="...">
+        {% endif %}
+        <div class="card-body">
+            <h5 class="card-title">{{ equipo.nombre }}</h5>
+            <p class="card-text">{{ equipo.anio_creacion }}</p>
+            
+        </div>
+    </div>
+{% endblock %}
